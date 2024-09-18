@@ -25,3 +25,19 @@ Before you begin, ensure you have the following:
 git clone https://github.com/your-username/home-file-server.git
 cd home-file-server
 ```
+
+### 2. Environment Setup
+
+Copy the .env.example to .env:
+
+```bash
+cp .env.example .env
+```
+
+Edit the .env file to configure the database and other settings. For example, if using SQLite:
+
+```bash
+DB_CONNECTION=sqlite
+DB_DATABASE=/var/www/html/database/database.sqlite
+
+```
