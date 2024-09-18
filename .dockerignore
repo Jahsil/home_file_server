@@ -1,0 +1,27 @@
+# Node modules
+node_modules
+
+# Composer vendor directory
+vendor
+
+# Laravel specific files and directories
+.env
+.git
+.gitignore
+docker-compose.yml
+docker/
+tests/
+phpunit.xml
+.vscode/
+.idea/
+*.log
+storage/*
+!storage/app
+!storage/app/public
+!storage/framework
+!storage/logs
+
+# System files
+.DS_Store
+.env.example
+.gitignore

@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  # Laravel PHP Backend Service
+  laravel:
+    image: laravel_backend
+    container_name: my-laravel-app5
+    ports:
+      - "8905:8000"
+    volumes:
+      - "/home/eyouel/Downloads/Compressed:/var/www/html/storage/app/files"
+      - "/home/eyouel/Documents/Eyouel/home_server/home_server_backend:/var/www/html"
+    command: php artisan serve --host=0.0.0.0 --port=8000
+    depends_on:
+      - nginx
+
+  # Nginx Service
+  nginx:
+    image: laravel-nginx
+    container_name: my-laravel-nginx
+    ports:
+      - "8906:80"
+    volumes:
+      - "/home/eyouel/Documents/Eyouel/home_server/home_server_backend:/var/www/html"
